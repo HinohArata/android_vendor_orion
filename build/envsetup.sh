@@ -84,7 +84,7 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            lunch orion_$target-$variant
+            lunch orion_$target-$aosp_target_release-$variant
         fi
     fi
     return $?
