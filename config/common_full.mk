@@ -1,5 +1,5 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile.mk)
+# Inherit common OrionOs stuff
+$(call inherit-product, vendor/orion/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 

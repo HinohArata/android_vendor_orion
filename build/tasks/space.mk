@@ -1,5 +1,5 @@
 # Copyright (C) 2017 Unlegacy-Android
-# Copyright (C) 2017,2020 The LineageOS Project
+# Copyright (C) 2017,2020 The OrionOs Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,16 +14,16 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# ORION OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION).zip
+ORION_TARGET_PACKAGE := $(PRODUCT_OUT)/$(ORION_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
-.PHONY: bacon
-bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).sha256sum
-	$(hide) ./vendor/lineage/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION).zip
+.PHONY: space
+space: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
+	$(hide) mv -f $(INTERNAL_OTA_PACKAGE_TARGET) $(ORION_TARGET_PACKAGE)
+	$(hide) $(SHA256) $(ORION_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(ORION_TARGET_PACKAGE).sha256sum
+	$(hide) ./vendor/orion/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(ORION_VERSION).zip
 	$(hide) rm -rf $(call intermediates-dir-for,PACKAGING,target_files)
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	@echo "Package Complete: $(ORION_TARGET_PACKAGE)" >&2
