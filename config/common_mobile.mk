@@ -3,7 +3,7 @@ $(call inherit-product, vendor/orion/config/common.mk)
 
 # Include AOSP audio files
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage14.mk)
-include vendor/afterlife/config/aosp_audio.mk
+include vendor/orion/config/aosp_audio.mk
 
 # Include Orion audio files
 include vendor/orion/config/orion_audio.mk
