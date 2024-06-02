@@ -261,3 +261,5 @@ include vendor/orion/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/orion/config/partner_gms.mk
+# Private keys
+-include vendor/orion-priv/keys/keys.mk

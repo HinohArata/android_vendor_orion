@@ -51,7 +51,8 @@ SOONG_CONFIG_orionGlobalVars += \
     target_trust_usb_control_path \
     target_trust_usb_control_enable \
     target_trust_usb_control_disable \
-    uses_egl_display_array
+    uses_egl_display_array \
+    uses_miui_camera
 
 SOONG_CONFIG_NAMESPACES += orionNvidiaVars
 SOONG_CONFIG_orionNvidiaVars += \
