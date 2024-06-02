@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # Copyright (C) 2023-2024 crDroid Android Project
+# Copyright (C) 2024 OrionOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,9 +43,9 @@ DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
 custom_default_revision =  "14.0"
-custom_dependencies = "crdroid.dependencies"
-org_manifest = "crdroidandroid"  # leave empty if org is provided in manifest
-org_display = "crDroid Android"  # needed for displaying
+custom_dependencies = "orion.dependencies"
+org_manifest = "OrionOs-prjkt"  # leave empty if org is provided in manifest
+org_display = "OrionOs"  # needed for displaying
 
 github_auth = None
 
@@ -286,7 +287,7 @@ def main():
         fallback_branch = detect_revision(repository)
         manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
         repo_path = "device/%s/%s" % (manufacturer, device)
-        adding = [{'repository': "crdroidandroid/" + repo_name, 'target_path': repo_path}]
+        adding = [{'repository': "OrionOs-prjkt/" + repo_name, 'target_path': repo_path}]
 
         add_to_manifest(adding, fallback_branch)
 
