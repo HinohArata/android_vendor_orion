@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-OFFICIAL_MAINTAINER = $(shell cat vendor/lineage/signed/signed.mk | awk '{ print $$1 }')
+OFFICIAL_MAINTAINER = $(shell cat vendor/orion/signed/signed.mk | awk '{ print $$1 }')
 
 ifdef ORION_MAINTAINER
     ifeq ($(filter $(ORION_MAINTAINER), $(OFFICIAL_MAINTAINER)), $(ORION_MAINTAINER))

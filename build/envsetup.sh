@@ -65,7 +65,7 @@ function breakfast()
 {
     target=$1
     local variant=$2
-    source ${ANDROID_BUILD_TOP}/vendor/lineage/vars/aosp_target_release
+    source ${ANDROID_BUILD_TOP}/vendor/orion/vars/aosp_target_release
 
     if [ $# -eq 0 ]; then
         # No arguments, so let's have the full menu
@@ -404,7 +404,7 @@ function makerecipe() {
     then
         pwd
         githubremote
-        git push lineage HEAD:refs/heads/'$1'
+        git push orion HEAD:refs/heads/'$1'
     fi
     '
 }
