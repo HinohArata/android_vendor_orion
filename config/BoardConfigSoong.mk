@@ -83,6 +83,8 @@ SOONG_CONFIG_orionNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_
 SOONG_CONFIG_orionQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_orionQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_orionQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
+SOONG_CONFIG_orionGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
+
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
