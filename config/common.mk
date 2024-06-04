@@ -80,11 +80,17 @@ PRODUCT_COPY_FILES += \
 
 # This is orion!
 PRODUCT_COPY_FILES += \
-    vendor/orion/config/permissions/org.orionos.android.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.orionos.android.xml
+    vendor/orion/config/permissions/org.orion.android.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.orion.android.xml
 
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
+
+
+ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
+# Lineage SDK
+include vendor/orion/config/lineage_sdk_common.mk
+endif
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
